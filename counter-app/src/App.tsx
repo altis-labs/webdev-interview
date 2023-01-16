@@ -6,7 +6,7 @@ import {Overlay} from "./Overlays";
 const Page = styled.div`
   height: 100vh;
 `
-
+// The contents of this file are acceptable
 export function App(): JSX.Element {
     const [count, setCount] = useState<number>(0)
 

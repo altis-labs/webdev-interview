@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
 import {App} from './App';
 
@@ -6,8 +6,9 @@ const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
 
+/* Use destructuring instead of dot proprty notation in JSX tags */
 root.render(
-    <React.StrictMode>
+    <StrictMode>
         <App/>
-    </React.StrictMode>
+    </StrictMode>
 );

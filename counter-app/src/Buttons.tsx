@@ -1,6 +1,6 @@
-import React from "react";
+// unused import of React may be removed
 import styled from "styled-components";
-// import axios from "axios"
+// remove commented code
 
 const Wrapper = styled.div`
   display: flex;
@@ -28,21 +28,23 @@ interface ButtonsProps {
 }
 
 export function Buttons({onClicked, onReset, count, setCount}: ButtonsProps): JSX.Element {
-    const handleButtonClicked = () => {
-        onClicked()
-    }
+    
+    // 1. removed commented code
+    // 2. methods which are only a single line may omit line breaks and brackets
+    // 3. handleResetClicked may be adjusted to be a 
+    const handleButtonClicked = () => onClicked()
+    const handleResetClicked = () => onReset()
 
-    const handleResetClicked = async () => {
-        onReset()
+    // 4. Use a more descriptive name for the button
+    // 5. Declare the two buttons in a consistent way
+    const resetButton = <Button onClick={handleResetClicked}>Reset</Button>
+    const clickButton = <Button onClick={handleButtonClicked}>Click me</Button>
 
-        // console.log("Grab from server")
-        // const result = await axios.get('https://altislabs.com')
-    }
-
-    const a = count ? <Button onClick={handleResetClicked}>Reset</Button> : null;
-
-    return <Wrapper>
-        <Button onClick={handleButtonClicked}>Click me</Button>
-        {a}
-    </Wrapper>
+    // 6. wrap in round brackets so both <Wrapper> declarations may have same indentation
+    return (
+        <Wrapper>
+            {clickButton}
+            {count ? resetButton : null}
+        </Wrapper>
+    )
 }

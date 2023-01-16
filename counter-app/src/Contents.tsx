@@ -1,7 +1,8 @@
 import styled from "styled-components";
-import React, {useState} from "react";
+// These imports may all be removed
 import {Buttons} from "./Buttons";
 import {Card} from "./Card";
+import {getMessage} from "./common";
 
 const Wrapper = styled.div`
   height: 100%;
@@ -36,15 +37,4 @@ export function Contents({count, setCount, onReset}: ContentsProps): JSX.Element
             <Buttons onReset={handleResetClicked} onClicked={handleButtonClicked} count={count}/>
         </Card>
     </Wrapper>
-}
-
-
-function getMessage(count: any): any {
-    if (count === 0) {
-        return "Click the button!";
-    } else if (count === 1) {
-        return `Clicked ${count} times`
-    } else {
-        return `Clicked ${count} times`
-    }
 }
