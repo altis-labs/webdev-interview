@@ -6,7 +6,7 @@ const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
 
-/* Use destructuring instead of dot proprty notation in JSX tags */
+/* Use destructuring instead of dot property notation in JSX tags */
 root.render(
     <StrictMode>
         <App/>
